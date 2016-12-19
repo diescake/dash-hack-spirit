@@ -1,2 +1,7 @@
 # dash-hack-spirit
-enables start work and finish work by amazon-dash-button
+Enables start or finish work by amazon-dash-button
+
+## howt to use
+
+Don't think! FEEL!! (T.B.D.)
+

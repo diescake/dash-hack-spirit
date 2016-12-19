@@ -1,0 +1,23 @@
+{
+  "name": "dash-hack-spirit",
+  "version": "1.0.0",
+  "description": "Enables start or finish work by amazon-dash-button",
+  "main": "bin/dash-hack-spirit",
+  "scripts": {
+    "start": "sudo node bin/dash-hack-spirit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aDaisukeKondo/dash-hack-spirit.git"
+  },
+  "author": "Daisuke Kondo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aDaisukeKondo/dash-hack-spirit/issues"
+  },
+  "homepage": "https://github.com/aDaisukeKondo/dash-hack-spirit#readme",
+  "dependencies": {
+    "dash-button": "^2.0.1",
+    "hack-spirit": "^0.1.4"
+  }
+}

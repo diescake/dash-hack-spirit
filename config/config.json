@@ -1,0 +1,18 @@
+{
+  "buttons": [
+    {
+      "MACAddress": "xx:xx:xx:xx:xx:xx",
+      "action": "start_work"
+    },
+    {
+      "MACAddress": "xx:xx:xx:xx:xx:xx",
+      "action": "finish_work"
+    }
+  ],
+
+  "profile": {
+    "user": "your.account@your.domain",
+    "password": "your-password"
+  }
+}
+

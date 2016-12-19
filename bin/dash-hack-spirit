@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const DashButton = require('dash-button');
+const HackSpirit = require('hack-spirit');
+
+const config = require('../config/config.json');
+const hackSpirit = new HackSpirit(true);
+
+config.buttons.forEach((aButton) => {
+  console.log(`${aButton.MACAddress} added !!`);
+  const button = new DashButton(aButton.MACAddress);
+
+  console.log('listen...');
+
+  button.addListener(() => {
+    console.log(`[${aButton.action}] fired!!`);
+
+    switch (aButton.action) {
+      case 'work_status':
+        hackSpirit.printWorkStatus(config.profile.user, config.profile.password);
+        break;
+      case 'start_work':
+        hackSpirit.startWork(config.profile.user, config.profile.password);
+        break;
+      case 'finish_work':
+        hackSpirit.finishWork(config.profile.user, config.profile.password);
+        break;
+      default:
+        hackSpirit.dispose();
+        break;
+    }
+  });
+});
+
