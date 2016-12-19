@@ -6,13 +6,11 @@ const DashButton = require('dash-button');
 const HackSpirit = require('hack-spirit');
 
 const config = require('../config/config.json');
-const hackSpirit = new HackSpirit(true);
+const hackSpirit = new HackSpirit(false);
 
 config.buttons.forEach((aButton) => {
   console.log(`${aButton.MACAddress} added !!`);
   const button = new DashButton(aButton.MACAddress);
-
-  console.log('listen...');
 
   button.addListener(() => {
     console.log(`[${aButton.action}] fired!!`);
